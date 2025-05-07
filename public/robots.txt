@@ -1,8 +1,21 @@
+# Allow important bots to crawl the entire site
 User-agent: Googlebot
 Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+Disallow: /*.pdf$
+Disallow: /*?*sort=
+Disallow: /*?*filter=
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+Disallow: /*.pdf$
+Disallow: /*?*sort=
+Disallow: /*?*filter=
 
 User-agent: Twitterbot
 Allow: /
@@ -10,5 +23,19 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# General rules for other bots
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+Disallow: /search/
+Disallow: /*.pdf$
+Disallow: /*.php$
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Disallow: /trackback/
+Disallow: /wp-admin/
+
+# Sitemap for better crawl efficiency
+Sitemap: https://yourwebsite.com/sitemap.xml
